@@ -1,2 +1,8 @@
 {
+    "enterNewChild" : "Enter new child",
+    "enterNewChildDescription" : "Enter the details of a new child to add to the system.",
+    "childName" : "Child name",
+    "entryID" : "Entry ID",
+    "phoneNumber1" : "Phone number 1",
+    "phoneNumber2Optional" : "Phone number 2 (optional)"
 }

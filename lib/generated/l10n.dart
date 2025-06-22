@@ -54,6 +54,56 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Enter new child`
+  String get enterNewChild {
+    return Intl.message(
+      'Enter new child',
+      name: 'enterNewChild',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the details of a new child to add to the system.`
+  String get enterNewChildDescription {
+    return Intl.message(
+      'Enter the details of a new child to add to the system.',
+      name: 'enterNewChildDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Child name`
+  String get childName {
+    return Intl.message('Child name', name: 'childName', desc: '', args: []);
+  }
+
+  /// `Entry ID`
+  String get entryID {
+    return Intl.message('Entry ID', name: 'entryID', desc: '', args: []);
+  }
+
+  /// `Phone number 1`
+  String get phoneNumber1 {
+    return Intl.message(
+      'Phone number 1',
+      name: 'phoneNumber1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number 2 (optional)`
+  String get phoneNumber2Optional {
+    return Intl.message(
+      'Phone number 2 (optional)',
+      name: 'phoneNumber2Optional',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
