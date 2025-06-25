@@ -104,6 +104,41 @@ class S {
       args: [],
     );
   }
+
+  /// `Notifications`
+  String get notifications {
+    return Intl.message(
+      'Notifications',
+      name: 'notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Settings`
+  String get settings {
+    return Intl.message('Settings', name: 'settings', desc: '', args: []);
+  }
+
+  /// `Dashboard`
+  String get dashboard {
+    return Intl.message('Dashboard', name: 'dashboard', desc: '', args: []);
+  }
+
+  /// `Current sessions`
+  String get currentSessions {
+    return Intl.message(
+      'Current sessions',
+      name: 'currentSessions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add child`
+  String get addChild {
+    return Intl.message('Add child', name: 'addChild', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

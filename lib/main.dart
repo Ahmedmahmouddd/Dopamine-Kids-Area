@@ -1,9 +1,8 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:kids_area_system/shared/widgets/main_layout.dart';
 import 'package:kids_area_system/core/theme/app_theme.dart';
-import 'package:kids_area_system/features/add_child/presentation/screens/add_child_screen.dart';
 import 'package:kids_area_system/generated/l10n.dart';
 import 'package:window_manager/window_manager.dart';
 
@@ -36,6 +35,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       locale: const Locale('en'),
       localizationsDelegates: [
         S.delegate,
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       theme: AppTheme.lightTheme,
-      home: const AddChildScreen(),
+      home: const MainLayout(),
     );
   }
 }

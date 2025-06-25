@@ -5,21 +5,21 @@ class AppTheme {
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
     fontFamily: 'Cairo',
-    scaffoldBackgroundColor: AppColors.background,
-    primaryColor: AppColors.primary,
+    scaffoldBackgroundColor: AppColors.darkWhite,
+    primaryColor: AppColors.yellow,
     colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.primary,
-      primary: AppColors.primary,
-      secondary: AppColors.accent,
-      background: AppColors.background,
+      seedColor: AppColors.yellow,
+      primary: AppColors.yellow,
+      secondary: AppColors.purple,
+      background: AppColors.darkWhite,
       surface: AppColors.white,
       onPrimary: AppColors.white,
       onSecondary: AppColors.white,
-      onSurface: AppColors.textPrimary,
+      onSurface: AppColors.black,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.button,
+        backgroundColor: AppColors.orange,
         foregroundColor: AppColors.white,
         textStyle: const TextStyle(
           fontFamily: 'Cairo',

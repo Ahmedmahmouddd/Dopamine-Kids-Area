@@ -22,7 +22,7 @@ class AddChildScreen extends StatelessWidget {
                       height: 100,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: AppColors.button,
+                        color: AppColors.orange,
                         borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(16),
                           topRight: Radius.circular(16),
@@ -52,7 +52,7 @@ class AddChildScreen extends StatelessWidget {
 
                     Container(
                       decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.button),
+                        border: Border.all(color: AppColors.orange),
                       ),
                       child: Form(
                         child: Padding(
@@ -122,7 +122,7 @@ class AddChildScreen extends StatelessWidget {
                     Container(
                       height: 40,
                       decoration: BoxDecoration(
-                        color: AppColors.button,
+                        color: AppColors.orange,
                         borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(16),
                           bottomRight: Radius.circular(16),

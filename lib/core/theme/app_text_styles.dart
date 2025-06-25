@@ -8,56 +8,56 @@ class AppTextStyles {
     fontFamily: _fontFamily,
     fontSize: 12,
     fontWeight: FontWeight.w400,
-    color: AppColors.textSecondary,
+    color: AppColors.secondaryText,
   );
 
   static const TextStyle font14Grey = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,
     fontWeight: FontWeight.w400,
-    color: AppColors.textSecondary,
+    color: AppColors.secondaryText,
   );
 
   static const TextStyle font14Black = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,
     fontWeight: FontWeight.w400,
-    color: AppColors.textPrimary,
+    color: AppColors.black,
   );
 
   static const TextStyle font16Black = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 16,
     fontWeight: FontWeight.w500,
-    color: AppColors.textPrimary,
+    color: AppColors.black,
   );
 
   static const TextStyle font16BoldBlack = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 16,
     fontWeight: FontWeight.w700,
-    color: AppColors.textPrimary,
+    color: AppColors.black,
   );
 
   static const TextStyle font18BoldBlack = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 18,
     fontWeight: FontWeight.w700,
-    color: AppColors.textPrimary,
+    color: AppColors.black,
   );
 
   static const TextStyle font20BoldPrimary = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 20,
     fontWeight: FontWeight.w700,
-    color: AppColors.primary,
+    color: AppColors.yellow,
   );
 
   static const TextStyle font22BoldAccent = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 22,
     fontWeight: FontWeight.w800,
-    color: AppColors.accent,
+    color: AppColors.purple,
   );
 
   static const TextStyle font24White = TextStyle(
