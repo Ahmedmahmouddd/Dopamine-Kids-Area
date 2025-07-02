@@ -22,6 +22,24 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "enterNewChild": MessageLookupByLibrary.simpleMessage("أدخل طفلاً جديداً"),
+    "addChild": MessageLookupByLibrary.simpleMessage("إضافة طفل"),
+    "addChildAndPrintReset": MessageLookupByLibrary.simpleMessage(
+      "إضافة طفل وطباعة الإيصال",
+    ),
+    "childName": MessageLookupByLibrary.simpleMessage("اسم الطفل"),
+    "currentSessions": MessageLookupByLibrary.simpleMessage("الجلسات الحالية"),
+    "dashboard": MessageLookupByLibrary.simpleMessage("لوحة التحكم"),
+    "enterNewChild": MessageLookupByLibrary.simpleMessage("إدخال طفل جديد"),
+    "enterNewChildDescription": MessageLookupByLibrary.simpleMessage(
+      "أدخل بيانات الطفل الجديد لإضافته إلى النظام.",
+    ),
+    "entryID": MessageLookupByLibrary.simpleMessage("رقم الدخول"),
+    "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
+    "phoneNumber1": MessageLookupByLibrary.simpleMessage("رقم الهاتف 1"),
+    "phoneNumber2Optional": MessageLookupByLibrary.simpleMessage(
+      "رقم الهاتف 2 (اختياري)",
+    ),
+    "resetForm": MessageLookupByLibrary.simpleMessage("إعادة ملئ النموذج"),
+    "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
   };
 }

@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:kids_area_system/core/theme/app_colors.dart';
+import 'package:kids_area_system/core/utils/app_constants.dart';
 
 class TopBarButton extends StatelessWidget {
   const TopBarButton({
@@ -21,7 +21,7 @@ class TopBarButton extends StatelessWidget {
       message: tooltip ?? '',
       decoration: BoxDecoration(
         color: AppColors.grey,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(AppConstants.mediumRadius),
       ),
       child: SizedBox(
         width: 30,
@@ -29,13 +29,17 @@ class TopBarButton extends StatelessWidget {
           onPressed: onTap,
           style: ElevatedButton.styleFrom(
             shape: const CircleBorder(),
-            padding: const EdgeInsets.all(4),
+            padding: const EdgeInsets.all(AppConstants.extraSmallPadding),
             backgroundColor: Colors.transparent,
             elevation: 0,
             shadowColor: Colors.transparent,
             side: BorderSide(color: AppColors.lightGrey),
           ),
-          child: SvgPicture.asset(iconAsset, width: 20, height: 20),
+          child: SvgPicture.asset(
+            iconAsset,
+            width: AppConstants.smallIconSize,
+            height: AppConstants.smallIconSize,
+          ),
         ),
       ),
     );

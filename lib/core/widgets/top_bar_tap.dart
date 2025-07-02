@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kids_area_system/core/theme/app_colors.dart';
+import 'package:kids_area_system/core/theme/app_text_styles.dart';
+import 'package:kids_area_system/core/utils/app_constants.dart';
 
 class TopBarTab extends StatelessWidget {
   final String label;
@@ -25,7 +27,12 @@ class TopBarTab extends StatelessWidget {
         cursor: SystemMouseCursors.click,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 150),
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+          padding: const EdgeInsets.fromLTRB(
+            AppConstants.basePadding,
+            AppConstants.zeroPadding,
+            AppConstants.basePadding,
+            AppConstants.smallPadding,
+          ),
           decoration: BoxDecoration(
             border: Border(
               bottom: BorderSide(
@@ -36,11 +43,9 @@ class TopBarTab extends StatelessWidget {
           ),
           child: Text(
             label,
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-              color: isSelected ? AppColors.black : Colors.grey[600],
-            ),
+            style: isSelected
+                ? AppTextStyles.font16BoldBlack
+                : AppTextStyles.font16Grey,
           ),
         ),
       ),

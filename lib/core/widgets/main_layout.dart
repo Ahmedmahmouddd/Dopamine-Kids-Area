@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kids_area_system/core/theme/app_colors.dart';
-import 'package:kids_area_system/shared/widgets/app_topbar.dart';
+import 'package:kids_area_system/core/widgets/app_topbar.dart';
 import 'package:kids_area_system/features/add_child/presentation/screens/add_child_screen.dart';
 import 'package:kids_area_system/features/current_sessions/presentation/screens/current_sessions_screen.dart';
 import 'package:kids_area_system/features/dashboard/presentation/screens/dashboard_screen.dart';
@@ -44,7 +44,8 @@ class _MainLayoutState extends State<MainLayout> {
       case 2:
         return const AddChildScreen();
       default:
-        return const SizedBox.shrink();
+        // return const SizedBox.shrink();
+        return const DashboardScreen();
     }
   }
 }

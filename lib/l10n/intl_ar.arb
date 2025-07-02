@@ -1,3 +1,15 @@
 {
-    "enterNewChild": "أدخل طفلاً جديداً"
+  "enterNewChild": "إدخال طفل جديد",
+  "enterNewChildDescription": "أدخل بيانات الطفل الجديد لإضافته إلى النظام.",
+  "childName": "اسم الطفل",
+  "entryID": "رقم الدخول",
+  "phoneNumber1": "رقم الهاتف 1",
+  "phoneNumber2Optional": "رقم الهاتف 2 (اختياري)",
+  "notifications": "الإشعارات",
+  "settings": "الإعدادات",
+  "dashboard": "لوحة التحكم",
+  "currentSessions": "الجلسات الحالية",
+  "addChild": "إضافة طفل",
+  "resetForm": "إعادة ملئ النموذج",
+  "addChildAndPrintReset": "إضافة طفل وطباعة الإيصال"
 }

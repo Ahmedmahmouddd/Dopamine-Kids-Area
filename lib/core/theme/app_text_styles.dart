@@ -11,25 +11,44 @@ class AppTextStyles {
     color: AppColors.secondaryText,
   );
 
-  static const TextStyle font14Grey = TextStyle(
+  static const TextStyle font12Black = TextStyle(
     fontFamily: _fontFamily,
-    fontSize: 14,
-    fontWeight: FontWeight.w400,
-    color: AppColors.secondaryText,
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: AppColors.black,
+  );
+
+  static const TextStyle font12White = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: AppColors.white,
   );
 
   static const TextStyle font14Black = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
     color: AppColors.black,
   );
-
+  static const TextStyle font15Grey = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+    color: AppColors.secondaryText,
+  );
   static const TextStyle font16Black = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 16,
     fontWeight: FontWeight.w500,
     color: AppColors.black,
+  );
+
+  static const TextStyle font16Grey = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: AppColors.secondaryText,
   );
 
   static const TextStyle font16BoldBlack = TextStyle(
@@ -44,6 +63,13 @@ class AppTextStyles {
     fontSize: 18,
     fontWeight: FontWeight.w700,
     color: AppColors.black,
+  );
+
+  static const TextStyle font20Red = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: AppColors.red,
   );
 
   static const TextStyle font20BoldPrimary = TextStyle(

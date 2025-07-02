@@ -9,5 +9,7 @@
     "settings" : "Settings",
     "dashboard" : "Dashboard",
     "currentSessions" : "Current sessions",
-    "addChild" : "Add child"
+    "addChild" : "Add child",
+    "resetForm" : "Reset form",
+    "addChildAndPrintReset" : "Add Child and Print Reset"
 }

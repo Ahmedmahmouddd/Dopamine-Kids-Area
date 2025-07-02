@@ -23,6 +23,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "addChild": MessageLookupByLibrary.simpleMessage("Add child"),
+    "addChildAndPrintReset": MessageLookupByLibrary.simpleMessage(
+      "Add Child and Print Reset",
+    ),
     "childName": MessageLookupByLibrary.simpleMessage("Child name"),
     "currentSessions": MessageLookupByLibrary.simpleMessage("Current sessions"),
     "dashboard": MessageLookupByLibrary.simpleMessage("Dashboard"),
@@ -36,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "phoneNumber2Optional": MessageLookupByLibrary.simpleMessage(
       "Phone number 2 (optional)",
     ),
+    "resetForm": MessageLookupByLibrary.simpleMessage("Reset form"),
     "settings": MessageLookupByLibrary.simpleMessage("Settings"),
   };
 }

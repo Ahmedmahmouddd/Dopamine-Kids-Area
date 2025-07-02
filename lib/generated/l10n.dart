@@ -139,6 +139,21 @@ class S {
   String get addChild {
     return Intl.message('Add child', name: 'addChild', desc: '', args: []);
   }
+
+  /// `Reset form`
+  String get resetForm {
+    return Intl.message('Reset form', name: 'resetForm', desc: '', args: []);
+  }
+
+  /// `Add Child and Print Reset`
+  String get addChildAndPrintReset {
+    return Intl.message(
+      'Add Child and Print Reset',
+      name: 'addChildAndPrintReset',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

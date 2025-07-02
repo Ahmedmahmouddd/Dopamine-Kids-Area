@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:kids_area_system/shared/widgets/main_layout.dart';
+import 'package:kids_area_system/core/widgets/main_layout.dart';
 import 'package:kids_area_system/core/theme/app_theme.dart';
 import 'package:kids_area_system/generated/l10n.dart';
 import 'package:window_manager/window_manager.dart';
@@ -49,5 +49,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-//Intl.getCurrentLocale()

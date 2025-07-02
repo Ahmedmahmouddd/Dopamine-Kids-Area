@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kids_area_system/core/theme/app_colors.dart';
+import 'package:kids_area_system/features/add_child/presentation/widgets/bottom_container.dart';
+import 'package:kids_area_system/features/add_child/presentation/widgets/top_container.dart';
 import 'package:kids_area_system/generated/l10n.dart';
 
 class AddChildScreen extends StatelessWidget {
@@ -18,41 +20,11 @@ class AddChildScreen extends StatelessWidget {
                 flex: 5,
                 child: Column(
                   children: [
-                    Container(
-                      height: 100,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: AppColors.orange,
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(16),
-                          topRight: Radius.circular(16),
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 32),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              S.of(context).enterNewChild,
-                              style: Theme.of(context).textTheme.titleLarge
-                                  ?.copyWith(color: Colors.white),
-                            ),
-                            const SizedBox(height: 8),
-                            Text(
-                              S.of(context).enterNewChildDescription,
-                              style: Theme.of(context).textTheme.bodyMedium
-                                  ?.copyWith(color: Colors.white70),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-
+                    TopBorder(),
                     Container(
                       decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.orange),
+                        color: AppColors.white,
+                        border: Border.all(color: AppColors.white),
                       ),
                       child: Form(
                         child: Padding(
@@ -119,32 +91,7 @@ class AddChildScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
-                      height: 40,
-                      decoration: BoxDecoration(
-                        color: AppColors.orange,
-                        borderRadius: const BorderRadius.only(
-                          bottomLeft: Radius.circular(16),
-                          bottomRight: Radius.circular(16),
-                        ),
-                      ),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: IconButton(
-                              icon: const Icon(Icons.add),
-                              onPressed: () {},
-                            ),
-                          ),
-                          Expanded(
-                            child: IconButton(
-                              icon: const Icon(Icons.remove),
-                              onPressed: () {},
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                    BottomBorder(),
                   ],
                 ),
               ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:kids_area_system/core/utils/app_constants.dart';
 import 'package:kids_area_system/generated/l10n.dart';
-import 'package:kids_area_system/shared/widgets/top_bar_button.dart';
-import 'package:kids_area_system/shared/widgets/top_bar_tap.dart';
+import 'package:kids_area_system/core/widgets/top_bar_button.dart';
+import 'package:kids_area_system/core/widgets/top_bar_tap.dart';
 
 class AppTopBar extends StatelessWidget {
   final int selectedTabIndex;
@@ -20,17 +20,20 @@ class AppTopBar extends StatelessWidget {
       children: [
         // Row 1: Branding and quick Icons
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppConstants.extraLargePadding,
+            vertical: AppConstants.mediumPadding,
+          ),
           child: Row(
             children: [
-              SvgPicture.asset('assets/images/logo.svg'),
+              Image.asset("assets/images/logo.png", width: 160),
               const Spacer(),
               TopBarButton(
                 iconAsset: 'assets/icons/notification.svg',
                 onTap: () {},
                 tooltip: S.of(context).notifications,
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: AppConstants.smallPadding),
               TopBarButton(
                 iconAsset: 'assets/icons/setting.svg',
                 onTap: () {},
@@ -40,8 +43,10 @@ class AppTopBar extends StatelessWidget {
           ),
         ),
         // Row 2: Navigation Tabs
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 32),
+        Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppConstants.extraLargePadding,
+          ),
           child: Row(
             children: [
               TopBarTab(
@@ -50,14 +55,14 @@ class AppTopBar extends StatelessWidget {
                 selectedIndex: selectedTabIndex,
                 onTap: onTabSelected,
               ),
-              const SizedBox(width: 24),
+              const SizedBox(width: AppConstants.largePadding),
               TopBarTab(
                 label: S.of(context).currentSessions,
                 index: 1,
                 selectedIndex: selectedTabIndex,
                 onTap: onTabSelected,
               ),
-              const SizedBox(width: 24),
+              const SizedBox(width: AppConstants.largePadding),
               TopBarTab(
                 label: S.of(context).addChild,
                 index: 2,
