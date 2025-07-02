@@ -35,7 +35,6 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "entryID": MessageLookupByLibrary.simpleMessage("رقم الدخول"),
     "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
-    "phoneNumber1": MessageLookupByLibrary.simpleMessage("رقم الهاتف 1"),
     "phoneNumber2Optional": MessageLookupByLibrary.simpleMessage(
       "رقم الهاتف 2 (اختياري)",
     ),

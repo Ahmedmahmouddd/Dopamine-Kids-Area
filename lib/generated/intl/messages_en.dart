@@ -27,19 +27,34 @@ class MessageLookup extends MessageLookupByLibrary {
       "Add Child and Print Reset",
     ),
     "childName": MessageLookupByLibrary.simpleMessage("Child name"),
+    "childNameOfGroupName": MessageLookupByLibrary.simpleMessage(
+      "Child name or group name",
+    ),
     "currentSessions": MessageLookupByLibrary.simpleMessage("Current sessions"),
     "dashboard": MessageLookupByLibrary.simpleMessage("Dashboard"),
+    "enterChildId": MessageLookupByLibrary.simpleMessage("Enter child ID"),
     "enterNewChild": MessageLookupByLibrary.simpleMessage("Enter new child"),
     "enterNewChildDescription": MessageLookupByLibrary.simpleMessage(
       "Enter the details of a new child to add to the system.",
     ),
     "entryID": MessageLookupByLibrary.simpleMessage("Entry ID"),
     "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
-    "phoneNumber1": MessageLookupByLibrary.simpleMessage("Phone number 1"),
+    "parentPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "Parent phone number",
+    ),
+    "parentSecondaryPhoneNumberOptional": MessageLookupByLibrary.simpleMessage(
+      "Parent secondary phone number (optional)",
+    ),
     "phoneNumber2Optional": MessageLookupByLibrary.simpleMessage(
       "Phone number 2 (optional)",
     ),
+    "primaryPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "Primary Phone Number",
+    ),
     "resetForm": MessageLookupByLibrary.simpleMessage("Reset form"),
+    "secondaryPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "Secondary Phone Number",
+    ),
     "settings": MessageLookupByLibrary.simpleMessage("Settings"),
   };
 }

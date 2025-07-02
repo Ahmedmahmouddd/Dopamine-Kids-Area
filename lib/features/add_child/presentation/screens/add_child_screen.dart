@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kids_area_system/core/theme/app_colors.dart';
+import 'package:kids_area_system/core/utils/app_constants.dart';
+import 'package:kids_area_system/core/widgets/custom_text_field.dart';
 import 'package:kids_area_system/features/add_child/presentation/widgets/bottom_container.dart';
 import 'package:kids_area_system/features/add_child/presentation/widgets/top_container.dart';
 import 'package:kids_area_system/generated/l10n.dart';
@@ -38,49 +40,53 @@ class AddChildScreen extends StatelessWidget {
                                 child: Row(
                                   children: [
                                     Expanded(
-                                      child: TextFormField(
-                                        decoration: InputDecoration(
-                                          labelText: S.of(context).childName,
-                                          border: const OutlineInputBorder(),
-                                        ),
+                                      child: CustomTextField(
+                                        controller: TextEditingController(),
+                                        title: S.of(context).childName,
+                                        hint: S
+                                            .of(context)
+                                            .childNameOfGroupName,
+                                        image: 'assets/icons/child.svg',
                                       ),
                                     ),
-                                    SizedBox(width: 24),
+                                    SizedBox(width: AppConstants.largePadding),
                                     Expanded(
-                                      child: TextFormField(
-                                        decoration: InputDecoration(
-                                          labelText: S.of(context).entryID,
-                                          border: const OutlineInputBorder(),
-                                        ),
+                                      child: CustomTextField(
+                                        controller: TextEditingController(),
+                                        title: S.of(context).entryID,
+                                        hint: S.of(context).enterChildId,
+                                        image: 'assets/icons/id1.svg',
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
-                              SizedBox(height: 24),
+                              SizedBox(height: AppConstants.largePadding),
                               Padding(
                                 padding: const EdgeInsets.symmetric(
-                                  horizontal: 32,
+                                  horizontal: AppConstants.extraLargePadding,
                                 ),
                                 child: Row(
                                   children: [
                                     Expanded(
-                                      child: TextFormField(
-                                        decoration: InputDecoration(
-                                          labelText: S.of(context).phoneNumber1,
-                                          border: const OutlineInputBorder(),
-                                        ),
+                                      child: CustomTextField(
+                                        controller: TextEditingController(),
+                                        title: S.of(context).primaryPhoneNumber,
+                                        hint: S.of(context).parentPhoneNumber,
+                                        image: 'assets/icons/phone1.svg',
                                       ),
                                     ),
-                                    SizedBox(width: 24),
+                                    SizedBox(width: AppConstants.largePadding),
                                     Expanded(
-                                      child: TextFormField(
-                                        decoration: InputDecoration(
-                                          labelText: S
-                                              .of(context)
-                                              .phoneNumber2Optional,
-                                          border: const OutlineInputBorder(),
-                                        ),
+                                      child: CustomTextField(
+                                        controller: TextEditingController(),
+                                        title: S
+                                            .of(context)
+                                            .secondaryPhoneNumber,
+                                        hint: S
+                                            .of(context)
+                                            .parentSecondaryPhoneNumberOptional,
+                                        image: 'assets/icons/phone2.svg',
                                       ),
                                     ),
                                   ],

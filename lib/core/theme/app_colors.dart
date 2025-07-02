@@ -5,7 +5,7 @@ class AppColors {
   static const Color darkWhite = Color(0xFFF0F2F4);
   static const Color overlayColor = Color(0x1EFFFFFF);
   static const Color secondayOverlayColor = Color(0x1EB4B4B4);
-  static const Color lightGrey = Color(0xFFDADCE0);
+  static const Color lightGrey = Color(0xFFD2D4D7);
   static const Color mediumGrey = Color(0xFFE0DBDB);
   static const Color grey = Color(0xFF848484);
   static const Color black = Color(0xFF000000);

@@ -85,11 +85,21 @@ class S {
     return Intl.message('Entry ID', name: 'entryID', desc: '', args: []);
   }
 
-  /// `Phone number 1`
-  String get phoneNumber1 {
+  /// `Primary Phone Number`
+  String get primaryPhoneNumber {
     return Intl.message(
-      'Phone number 1',
-      name: 'phoneNumber1',
+      'Primary Phone Number',
+      name: 'primaryPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Secondary Phone Number`
+  String get secondaryPhoneNumber {
+    return Intl.message(
+      'Secondary Phone Number',
+      name: 'secondaryPhoneNumber',
       desc: '',
       args: [],
     );
@@ -150,6 +160,46 @@ class S {
     return Intl.message(
       'Add Child and Print Reset',
       name: 'addChildAndPrintReset',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Child name or group name`
+  String get childNameOfGroupName {
+    return Intl.message(
+      'Child name or group name',
+      name: 'childNameOfGroupName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter child ID`
+  String get enterChildId {
+    return Intl.message(
+      'Enter child ID',
+      name: 'enterChildId',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Parent phone number`
+  String get parentPhoneNumber {
+    return Intl.message(
+      'Parent phone number',
+      name: 'parentPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Parent secondary phone number (optional)`
+  String get parentSecondaryPhoneNumberOptional {
+    return Intl.message(
+      'Parent secondary phone number (optional)',
+      name: 'parentSecondaryPhoneNumberOptional',
       desc: '',
       args: [],
     );

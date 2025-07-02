@@ -3,7 +3,8 @@
     "enterNewChildDescription" : "Enter the details of a new child to add to the system.",
     "childName" : "Child name",
     "entryID" : "Entry ID",
-    "phoneNumber1" : "Phone number 1",
+    "primaryPhoneNumber" : "Primary Phone Number",
+    "secondaryPhoneNumber" : "Secondary Phone Number",
     "phoneNumber2Optional" : "Phone number 2 (optional)",
     "notifications" : "Notifications",
     "settings" : "Settings",
@@ -11,5 +12,9 @@
     "currentSessions" : "Current sessions",
     "addChild" : "Add child",
     "resetForm" : "Reset form",
-    "addChildAndPrintReset" : "Add Child and Print Reset"
+    "addChildAndPrintReset" : "Add Child and Print Reset",
+    "childNameOfGroupName" : "Child name or group name",
+    "enterChildId": "Enter child ID",
+    "parentPhoneNumber" : "Parent phone number",
+    "parentSecondaryPhoneNumberOptional" : "Parent secondary phone number (optional)"
 }

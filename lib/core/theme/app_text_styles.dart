@@ -31,6 +31,14 @@ class AppTextStyles {
     fontWeight: FontWeight.w500,
     color: AppColors.black,
   );
+
+  static const TextStyle font14Grey = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: AppColors.secondaryText,
+  );
+
   static const TextStyle font15Grey = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 15,
