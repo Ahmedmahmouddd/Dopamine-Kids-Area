@@ -12,22 +12,23 @@ class CustomTextField extends StatelessWidget {
     required this.title,
     required this.hint,
     required this.image,
-    this.readOnly,
+    this.readOnly, this.fillColor,
   });
 
   final TextEditingController controller;
   final ValueChanged<String>? onChanged;
   final String title, hint, image;
   final bool? readOnly;
+  final Color? fillColor; 
   @override
   Widget build(BuildContext context) {
     return Column(
-      spacing: AppConstants.extraSmallPadding,
+      spacing: AppConstants.smallPadding,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(title, style: AppTextStyles.font14Black),
         SizedBox(
-          height: 38,
+          height: 40,
           child: TextFormField(
             readOnly: readOnly ?? false,
             controller: controller,
@@ -36,14 +37,11 @@ class CustomTextField extends StatelessWidget {
             cursorWidth: 2,
             style: AppTextStyles.font14Black,
             decoration: InputDecoration(
-              suffixIcon: Padding(
-                padding: const EdgeInsets.only(
-                  top: AppConstants.smallPadding,
-                  bottom: AppConstants.smallPadding,
-                ),
-                child: SvgPicture.asset(image),
+              prefixIcon: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: SvgPicture.asset(image, color: AppColors.grey),
               ),
-              fillColor: AppColors.white,
+              fillColor: fillColor ??  AppColors.white ,
               hintText: hint,
               filled: true,
               contentPadding: const EdgeInsets.symmetric(

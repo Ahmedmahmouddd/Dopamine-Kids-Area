@@ -8,7 +8,7 @@ class AppTextStyles {
     fontFamily: _fontFamily,
     fontSize: 12,
     fontWeight: FontWeight.w400,
-    color: AppColors.secondaryText,
+    color: AppColors.grey,
   );
 
   static const TextStyle font12Black = TextStyle(
@@ -36,14 +36,14 @@ class AppTextStyles {
     fontFamily: _fontFamily,
     fontSize: 14,
     fontWeight: FontWeight.w400,
-    color: AppColors.secondaryText,
+    color: AppColors.grey,
   );
 
   static const TextStyle font15Grey = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 15,
     fontWeight: FontWeight.w400,
-    color: AppColors.secondaryText,
+    color: AppColors.grey,
   );
   static const TextStyle font16Black = TextStyle(
     fontFamily: _fontFamily,
@@ -56,7 +56,7 @@ class AppTextStyles {
     fontFamily: _fontFamily,
     fontSize: 16,
     fontWeight: FontWeight.w500,
-    color: AppColors.secondaryText,
+    color: AppColors.grey,
   );
 
   static const TextStyle font16BoldBlack = TextStyle(

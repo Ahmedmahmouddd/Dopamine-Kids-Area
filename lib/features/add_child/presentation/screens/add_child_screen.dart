@@ -47,22 +47,22 @@ class AddChildScreen extends StatelessWidget {
                                         hint: S
                                             .of(context)
                                             .childNameOfGroupName,
-                                        image: 'assets/icons/child.svg',
+                                        image: 'assets/icons/profile.svg',
                                       ),
                                     ),
-                                    SizedBox(width: AppConstants.largePadding),
+                                    SizedBox(width: 40),
                                     Expanded(
                                       child: CustomTextField(
                                         controller: TextEditingController(),
                                         title: S.of(context).entryID,
                                         hint: S.of(context).enterChildId,
-                                        image: 'assets/icons/id1.svg',
+                                        image: 'assets/icons/id.svg',
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
-                              SizedBox(height: AppConstants.largePadding),
+                              SizedBox(height: 24),
                               Padding(
                                 padding: const EdgeInsets.symmetric(
                                   horizontal: AppConstants.extraLargePadding,
@@ -74,10 +74,10 @@ class AddChildScreen extends StatelessWidget {
                                         controller: TextEditingController(),
                                         title: S.of(context).primaryPhoneNumber,
                                         hint: S.of(context).parentPhoneNumber,
-                                        image: 'assets/icons/phone1.svg',
+                                        image: 'assets/icons/call.svg',
                                       ),
                                     ),
-                                    SizedBox(width: AppConstants.largePadding),
+                                    SizedBox(width: 40),
                                     Expanded(
                                       child: CustomTextField(
                                         controller: TextEditingController(),
@@ -87,13 +87,13 @@ class AddChildScreen extends StatelessWidget {
                                         hint: S
                                             .of(context)
                                             .parentSecondaryPhoneNumberOptional,
-                                        image: 'assets/icons/phone2.svg',
+                                        image: 'assets/icons/call-add.svg',
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
-                              SizedBox(height: AppConstants.largePadding),
+                              SizedBox(height: 24),
                               Padding(
                                 padding: const EdgeInsets.symmetric(
                                   horizontal: AppConstants.extraLargePadding,
@@ -102,6 +102,7 @@ class AddChildScreen extends StatelessWidget {
                                   children: [
                                     Expanded(
                                       child: CustomDropdownField(
+                                        image: 'assets/icons/clock.svg',
                                         title: S.of(context).sessionDuration,
                                         hint: S.of(context).selectDuration,
                                         value: '30',
@@ -154,9 +155,10 @@ class AddChildScreen extends StatelessWidget {
                                         },
                                       ),
                                     ),
-                                    SizedBox(width: AppConstants.largePadding),
+                                    SizedBox(width: 40),
                                     Expanded(
                                       child: CustomDropdownField(
+                                        image: 'assets/icons/people.svg',
                                         title: S.of(context).numberOfChildren,
                                         hint: S.of(context).selectNumber,
                                         value: '1',
@@ -196,7 +198,7 @@ class AddChildScreen extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              SizedBox(height: AppConstants.largePadding),
+                              SizedBox(height: 24),
                               Padding(
                                 padding: const EdgeInsets.symmetric(
                                   horizontal: AppConstants.extraLargePadding,
@@ -205,22 +207,23 @@ class AddChildScreen extends StatelessWidget {
                                   children: [
                                     Expanded(
                                       child: CustomTextField(
+                                        fillColor: AppColors.lightGrey,
                                         readOnly: true,
                                         controller: TextEditingController(),
                                         title: S.of(context).totalPoints,
                                         hint: S.of(context).totalPoints,
-                                        image:
-                                            'assets/icons/target.svg',
+                                        image: 'assets/icons/point.svg',
                                       ),
                                     ),
-                                    SizedBox(width: AppConstants.largePadding),
+                                    SizedBox(width: 40),
                                     Expanded(
                                       child: CustomTextField(
+                                        fillColor: AppColors.lightGrey,
                                         readOnly: true,
                                         controller: TextEditingController(),
                                         title: S.of(context).currentTime,
                                         hint: DateTime.now().toString(),
-                                        image: 'assets/icons/time.svg',
+                                        image: 'assets/icons/clock.svg',
                                       ),
                                     ),
                                   ],

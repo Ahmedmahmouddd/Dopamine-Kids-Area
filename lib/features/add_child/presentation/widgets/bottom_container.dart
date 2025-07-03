@@ -30,7 +30,7 @@ class BottomBorder extends StatelessWidget {
             backgroundColor: AppColors.white,
             onPressed: () {},
             text: S.of(context).resetForm,
-            imageAsset: "assets/icons/reset.svg",
+            imageAsset: "assets/icons/refresh.svg",
           ),
           CustomButton(
             // width: 200,
@@ -39,7 +39,7 @@ class BottomBorder extends StatelessWidget {
             backgroundColor: AppColors.red,
             onPressed: () {},
             text: S.of(context).addChildAndPrintReset,
-            imageAsset: "assets/icons/print.svg",
+            imageAsset: "assets/icons/printer.svg",
           ),
         ],
       ),
