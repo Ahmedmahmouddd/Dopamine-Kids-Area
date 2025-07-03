@@ -204,6 +204,111 @@ class S {
       args: [],
     );
   }
+
+  /// `Session duration`
+  String get sessionDuration {
+    return Intl.message(
+      'Session duration',
+      name: 'sessionDuration',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select duration`
+  String get selectDuration {
+    return Intl.message(
+      'Select duration',
+      name: 'selectDuration',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `30 minutes`
+  String get minutes30 {
+    return Intl.message('30 minutes', name: 'minutes30', desc: '', args: []);
+  }
+
+  /// `1 hour`
+  String get minutes60 {
+    return Intl.message('1 hour', name: 'minutes60', desc: '', args: []);
+  }
+
+  /// `1 hour and 30 minutes`
+  String get minutes90 {
+    return Intl.message(
+      '1 hour and 30 minutes',
+      name: 'minutes90',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2 hours`
+  String get minutes120 {
+    return Intl.message('2 hours', name: 'minutes120', desc: '', args: []);
+  }
+
+  /// `2 hours and 30 minutes`
+  String get minutes150 {
+    return Intl.message(
+      '2 hours and 30 minutes',
+      name: 'minutes150',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `3 hours`
+  String get minutes180 {
+    return Intl.message('3 hours', name: 'minutes180', desc: '', args: []);
+  }
+
+  /// `Open Time`
+  String get openTime {
+    return Intl.message('Open Time', name: 'openTime', desc: '', args: []);
+  }
+
+  /// `Number of children`
+  String get numberOfChildren {
+    return Intl.message(
+      'Number of children',
+      name: 'numberOfChildren',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Number`
+  String get selectNumber {
+    return Intl.message(
+      'Select Number',
+      name: 'selectNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Points`
+  String get totalPoints {
+    return Intl.message(
+      'Total Points',
+      name: 'totalPoints',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Current Time`
+  String get currentTime {
+    return Intl.message(
+      'Current Time',
+      name: 'currentTime',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

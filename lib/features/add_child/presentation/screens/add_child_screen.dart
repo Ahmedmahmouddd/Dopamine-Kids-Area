@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kids_area_system/core/theme/app_colors.dart';
 import 'package:kids_area_system/core/utils/app_constants.dart';
+import 'package:kids_area_system/core/widgets/custom_dropdown_menu.dart';
 import 'package:kids_area_system/core/widgets/custom_text_field.dart';
 import 'package:kids_area_system/features/add_child/presentation/widgets/bottom_container.dart';
 import 'package:kids_area_system/features/add_child/presentation/widgets/top_container.dart';
@@ -87,6 +88,139 @@ class AddChildScreen extends StatelessWidget {
                                             .of(context)
                                             .parentSecondaryPhoneNumberOptional,
                                         image: 'assets/icons/phone2.svg',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(height: AppConstants.largePadding),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: AppConstants.extraLargePadding,
+                                ),
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: CustomDropdownField(
+                                        title: S.of(context).sessionDuration,
+                                        hint: S.of(context).selectDuration,
+                                        value: '30',
+                                        items: [
+                                          DropdownMenuItem(
+                                            value: '30',
+                                            child: Text(
+                                              S.of(context).minutes30,
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: '60',
+                                            child: Text(
+                                              S.of(context).minutes60,
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: '90',
+                                            child: Text(
+                                              S.of(context).minutes90,
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: '120',
+                                            child: Text(
+                                              S.of(context).minutes120,
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: '150',
+                                            child: Text(
+                                              S.of(context).minutes150,
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: '180',
+                                            child: Text(
+                                              S.of(context).minutes180,
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: 'open',
+                                            child: Text(S.of(context).openTime),
+                                          ),
+                                        ],
+                                        onChanged: (value) {
+                                          // setState(() {
+                                          //   selectedValue = value;
+                                          // });
+                                        },
+                                      ),
+                                    ),
+                                    SizedBox(width: AppConstants.largePadding),
+                                    Expanded(
+                                      child: CustomDropdownField(
+                                        title: S.of(context).numberOfChildren,
+                                        hint: S.of(context).selectNumber,
+                                        value: '1',
+                                        items: [
+                                          DropdownMenuItem(
+                                            value: '1',
+                                            child: Text('1'),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: '2',
+                                            child: Text('2'),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: '3',
+                                            child: Text('3'),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: '4',
+                                            child: Text('4'),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: '5',
+                                            child: Text('5'),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: '6',
+                                            child: Text('6'),
+                                          ),
+                                        ],
+                                        onChanged: (value) {
+                                          // setState(() {
+                                          //   selectedValue = value;
+                                          // });
+                                        },
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(height: AppConstants.largePadding),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: AppConstants.extraLargePadding,
+                                ),
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: CustomTextField(
+                                        readOnly: true,
+                                        controller: TextEditingController(),
+                                        title: S.of(context).totalPoints,
+                                        hint: S.of(context).totalPoints,
+                                        image:
+                                            'assets/icons/target.svg',
+                                      ),
+                                    ),
+                                    SizedBox(width: AppConstants.largePadding),
+                                    Expanded(
+                                      child: CustomTextField(
+                                        readOnly: true,
+                                        controller: TextEditingController(),
+                                        title: S.of(context).currentTime,
+                                        hint: DateTime.now().toString(),
+                                        image: 'assets/icons/time.svg',
                                       ),
                                     ),
                                   ],

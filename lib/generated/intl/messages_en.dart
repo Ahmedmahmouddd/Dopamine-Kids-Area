@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Child name or group name",
     ),
     "currentSessions": MessageLookupByLibrary.simpleMessage("Current sessions"),
+    "currentTime": MessageLookupByLibrary.simpleMessage("Current Time"),
     "dashboard": MessageLookupByLibrary.simpleMessage("Dashboard"),
     "enterChildId": MessageLookupByLibrary.simpleMessage("Enter child ID"),
     "enterNewChild": MessageLookupByLibrary.simpleMessage("Enter new child"),
@@ -38,7 +39,19 @@ class MessageLookup extends MessageLookupByLibrary {
       "Enter the details of a new child to add to the system.",
     ),
     "entryID": MessageLookupByLibrary.simpleMessage("Entry ID"),
+    "minutes120": MessageLookupByLibrary.simpleMessage("2 hours"),
+    "minutes150": MessageLookupByLibrary.simpleMessage(
+      "2 hours and 30 minutes",
+    ),
+    "minutes180": MessageLookupByLibrary.simpleMessage("3 hours"),
+    "minutes30": MessageLookupByLibrary.simpleMessage("30 minutes"),
+    "minutes60": MessageLookupByLibrary.simpleMessage("1 hour"),
+    "minutes90": MessageLookupByLibrary.simpleMessage("1 hour and 30 minutes"),
     "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
+    "numberOfChildren": MessageLookupByLibrary.simpleMessage(
+      "Number of children",
+    ),
+    "openTime": MessageLookupByLibrary.simpleMessage("Open Time"),
     "parentPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Parent phone number",
     ),
@@ -55,6 +68,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "secondaryPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Secondary Phone Number",
     ),
+    "selectDuration": MessageLookupByLibrary.simpleMessage("Select duration"),
+    "selectNumber": MessageLookupByLibrary.simpleMessage("Select Number"),
+    "sessionDuration": MessageLookupByLibrary.simpleMessage("Session duration"),
     "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+    "totalPoints": MessageLookupByLibrary.simpleMessage("Total Points"),
   };
 }

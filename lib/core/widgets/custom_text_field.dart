@@ -12,62 +12,62 @@ class CustomTextField extends StatelessWidget {
     required this.title,
     required this.hint,
     required this.image,
+    this.readOnly,
   });
 
   final TextEditingController controller;
   final ValueChanged<String>? onChanged;
   final String title, hint, image;
+  final bool? readOnly;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppConstants.horizontalPadding,
-      ),
-      child: Column(
-        spacing: AppConstants.extraSmallPadding,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(title, style: AppTextStyles.font14Black),
-          SizedBox(
-            height: 38,
-            child: TextFormField(
-              controller: controller,
-              onChanged: onChanged,
-              cursorColor: AppColors.yellow,
-              cursorWidth: 2,
-              style: AppTextStyles.font14Black,
-              decoration: InputDecoration(
-                suffixIcon: Padding(
-                  padding: const EdgeInsets.only(
-                    top: AppConstants.smallPadding,
-                    bottom: AppConstants.smallPadding,
-                  ),
-                  child: SvgPicture.asset(image),
+    return Column(
+      spacing: AppConstants.extraSmallPadding,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(title, style: AppTextStyles.font14Black),
+        SizedBox(
+          height: 38,
+          child: TextFormField(
+            readOnly: readOnly ?? false,
+            controller: controller,
+            onChanged: onChanged,
+            cursorColor: AppColors.yellow,
+            cursorWidth: 2,
+            style: AppTextStyles.font14Black,
+            decoration: InputDecoration(
+              suffixIcon: Padding(
+                padding: const EdgeInsets.only(
+                  top: AppConstants.smallPadding,
+                  bottom: AppConstants.smallPadding,
                 ),
-                fillColor: AppColors.white,
-                hintText: hint,
-                filled: true,
-                contentPadding: const EdgeInsets.symmetric(
-                  horizontal: AppConstants.mediumPadding,
+                child: SvgPicture.asset(image),
+              ),
+              fillColor: AppColors.white,
+              hintText: hint,
+              filled: true,
+              contentPadding: const EdgeInsets.symmetric(
+                horizontal: AppConstants.mediumPadding,
+              ),
+              hintStyle: AppTextStyles.font14Grey,
+              enabledBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: AppColors.lightGrey, width: 2),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(AppConstants.basePadding),
                 ),
-                hintStyle: AppTextStyles.font14Grey,
-                enabledBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: AppColors.lightGrey, width: 2),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(AppConstants.basePadding),
-                  ),
-                ),
-                focusedBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: AppColors.yellow, width: 2),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(AppConstants.basePadding),
-                  ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: readOnly == true
+                    ? BorderSide(color: AppColors.lightGrey, width: 2)
+                    : BorderSide(color: AppColors.yellow, width: 2),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(AppConstants.basePadding),
                 ),
               ),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

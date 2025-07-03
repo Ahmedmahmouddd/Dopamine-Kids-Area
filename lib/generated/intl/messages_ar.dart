@@ -27,18 +27,47 @@ class MessageLookup extends MessageLookupByLibrary {
       "إضافة طفل وطباعة الإيصال",
     ),
     "childName": MessageLookupByLibrary.simpleMessage("اسم الطفل"),
+    "childNameOfGroupName": MessageLookupByLibrary.simpleMessage(
+      "اسم الطفل أو اسم المجموعة",
+    ),
     "currentSessions": MessageLookupByLibrary.simpleMessage("الجلسات الحالية"),
+    "currentTime": MessageLookupByLibrary.simpleMessage("الوقت الحالي"),
     "dashboard": MessageLookupByLibrary.simpleMessage("لوحة التحكم"),
+    "enterChildId": MessageLookupByLibrary.simpleMessage("أدخل رقم الطفل"),
     "enterNewChild": MessageLookupByLibrary.simpleMessage("إدخال طفل جديد"),
     "enterNewChildDescription": MessageLookupByLibrary.simpleMessage(
       "أدخل بيانات الطفل الجديد لإضافته إلى النظام.",
     ),
     "entryID": MessageLookupByLibrary.simpleMessage("رقم الدخول"),
+    "minutes120": MessageLookupByLibrary.simpleMessage("ساعتان"),
+    "minutes150": MessageLookupByLibrary.simpleMessage("ساعتان ونصف"),
+    "minutes180": MessageLookupByLibrary.simpleMessage("ثلاث ساعات"),
+    "minutes30": MessageLookupByLibrary.simpleMessage("نصف ساعة"),
+    "minutes60": MessageLookupByLibrary.simpleMessage("ساعة"),
+    "minutes90": MessageLookupByLibrary.simpleMessage("ساعة ونصف"),
     "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
+    "numberOfChildren": MessageLookupByLibrary.simpleMessage("عدد الأطفال"),
+    "openTime": MessageLookupByLibrary.simpleMessage("وقت مفتوح"),
+    "parentPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "رقم هاتف ولي الأمر",
+    ),
+    "parentSecondaryPhoneNumberOptional": MessageLookupByLibrary.simpleMessage(
+      "رقم هاتف إضافي لولي الأمر (اختياري)",
+    ),
     "phoneNumber2Optional": MessageLookupByLibrary.simpleMessage(
       "رقم الهاتف 2 (اختياري)",
     ),
-    "resetForm": MessageLookupByLibrary.simpleMessage("إعادة ملئ النموذج"),
+    "primaryPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "رقم الهاتف الأساسي",
+    ),
+    "resetForm": MessageLookupByLibrary.simpleMessage("إعادة تعيين النموذج"),
+    "secondaryPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "رقم الهاتف الثانوي",
+    ),
+    "selectDuration": MessageLookupByLibrary.simpleMessage("اختر المدة"),
+    "selectNumber": MessageLookupByLibrary.simpleMessage("اختر العدد"),
+    "sessionDuration": MessageLookupByLibrary.simpleMessage("مدة الجلسة"),
     "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
+    "totalPoints": MessageLookupByLibrary.simpleMessage("إجمالي النقاط"),
   };
 }
