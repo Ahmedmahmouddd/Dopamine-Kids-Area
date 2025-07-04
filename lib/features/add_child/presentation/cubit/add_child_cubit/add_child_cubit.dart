@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:developer';
-
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:kids_area_system/core/helpers/helpers.dart';
@@ -10,7 +9,9 @@ part 'add_child_state.dart';
 
 class AddChildCubit extends Cubit<AddChildState> {
   AddChildCubit() : super(AddChildInitial()) {
-    _initTimeUpdates(); // Initialize time updates when cubit is created
+    _initTimeUpdates();
+    // Initialize points to 0 on startup
+    pointsController.text = '0';
   }
 
   final formKey = GlobalKey<FormState>();
@@ -87,15 +88,37 @@ class AddChildCubit extends Cubit<AddChildState> {
     DropdownMenuItem(value: 'open', child: Text(S.of(context).openTime)),
   ];
 
+  // void resetForm() {
+  //   nameController.clear();
+  //   idController.clear();
+  //   phone1Controller.clear();
+  //   phone2Controller.clear();
+  //   currentTimeController.clear();
+  //   selectedDuration = null;
+  //   selectedChildrenCount = '1';
+  //   pointsController.text = '0'; // Directly set to 0 here
+  //   emit(AddChildInitial()); // This creates fresh state
+  //   formKey.currentState?.reset();
+  // }
+
   void resetForm() {
+    // Clear all controllers
     nameController.clear();
     idController.clear();
     phone1Controller.clear();
     phone2Controller.clear();
-    pointsController.clear();
     currentTimeController.clear();
-    emit(AddChildInitial());
+
+    // Reset variables
+    selectedDuration = null;
+    selectedChildrenCount = '1';
+
+    // Directly set points to 0
+    pointsController.text = '0';
+
+    // Reset form and emit new state
     formKey.currentState?.reset();
+    emit(AddChildInitial());
   }
 
   void addChild() {
@@ -111,19 +134,18 @@ class AddChildCubit extends Cubit<AddChildState> {
 
   void updateSelectedDuration(String? value) {
     selectedDuration = value;
-    emit(AddChildState()); // Rebuild listeners
+    _calculatePoints();
+    emit(AddChildState());
   }
 
   void updateChildrenCount(String? value) {
     selectedChildrenCount = value ?? '1';
-    emit(AddChildState()); // Rebuild listeners
+    _calculatePoints();
+    emit(AddChildState());
   }
 
   void _initTimeUpdates() {
-    // Update immediately
     _updateTimeDisplay();
-
-    // Update every minute
     timeTimer = Timer.periodic(const Duration(minutes: 1), (_) {
       _updateTimeDisplay();
     });
@@ -133,15 +155,32 @@ class AddChildCubit extends Cubit<AddChildState> {
     final now = DateTime.now();
     final hour = now.hour > 12 ? now.hour - 12 : now.hour;
     final amPm = now.hour >= 12
-        ? isLanguageArabic()
-              ? 'مساءً'
-              : 'PM'
-        : isLanguageArabic()
-        ? 'صباحًا'
-        : 'AM';
+        ? (isLanguageArabic() ? 'مساءً' : 'PM')
+        : (isLanguageArabic() ? 'صباحًا' : 'AM');
     final formattedTime =
         '$hour:${now.minute.toString().padLeft(2, '0')} $amPm';
     currentTimeController.text = formattedTime;
     emit(AddChildState());
+  }
+
+  void _calculatePoints() {
+    if (selectedDuration == null) {
+      pointsController.text = '0';
+      return;
+    }
+
+    final points = switch (selectedDuration) {
+      '30' => 125,
+      '60' => 250,
+      '90' => 375,
+      '120' => 500,
+      '150' => 625,
+      '180' => 750,
+      'open' => 0,
+      _ => 0,
+    };
+
+    final children = int.tryParse(selectedChildrenCount) ?? 1;
+    pointsController.text = (points * children).toString();
   }
 }

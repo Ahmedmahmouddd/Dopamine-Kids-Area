@@ -16,7 +16,7 @@
     "childNameOfGroupName": "Child name or group name",
     "enterChildId": "Enter child ID",
     "parentPhoneNumber": "Parent phone number",
-    "parentSecondaryPhoneNumberOptional": "Parent secondary phone number (optional)",
+    "parentSecondaryPhoneNumberOptional": "Parent phone number (optional)",
     "sessionDuration": "Session duration",
     "selectDuration": "Select duration",
     "minutes30": "30 minutes",

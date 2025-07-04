@@ -60,7 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Parent phone number",
     ),
     "parentSecondaryPhoneNumberOptional": MessageLookupByLibrary.simpleMessage(
-      "Parent secondary phone number (optional)",
+      "Parent phone number (optional)",
     ),
     "phoneMustBe11Digits": MessageLookupByLibrary.simpleMessage(
       "Phone number must be 11 digits",

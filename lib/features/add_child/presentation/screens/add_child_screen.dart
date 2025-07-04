@@ -189,14 +189,23 @@ class AddChildFormContent extends StatelessWidget {
                               child: Row(
                                 children: [
                                   Expanded(
-                                    child: CustomTextField(
-                                      fillColor: AppColors.lightGrey,
-                                      enabled: false,
-                                      controller: cubit.pointsController,
-                                      title: s.totalPoints,
-                                      hint: s.totalPoints,
-                                      image: 'assets/icons/point.svg',
-                                    ),
+                                    child:
+                                        BlocBuilder<
+                                          AddChildCubit,
+                                          AddChildState
+                                        >(
+                                          builder: (context, state) {
+                                            return CustomTextField(
+                                              fillColor: AppColors.lightGrey,
+                                              enabled: false,
+                                              controller:
+                                                  cubit.pointsController,
+                                              title: s.totalPoints,
+                                              hint: s.totalPoints,
+                                              image: 'assets/icons/point.svg',
+                                            );
+                                          },
+                                        ),
                                   ),
                                   const SizedBox(width: 40),
                                   Expanded(
@@ -209,9 +218,8 @@ class AddChildFormContent extends StatelessWidget {
                                             return CustomTextField(
                                               fillColor: AppColors.lightGrey,
                                               enabled: false,
-                                              controller: context
-                                                  .read<AddChildCubit>()
-                                                  .currentTimeController,
+                                              controller:
+                                                  cubit.currentTimeController,
                                               title: s.currentTime,
                                               hint: s.currentTime,
                                               image: 'assets/icons/clock.svg',

@@ -54,7 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "رقم هاتف ولي الأمر",
     ),
     "parentSecondaryPhoneNumberOptional": MessageLookupByLibrary.simpleMessage(
-      "رقم هاتف ولي الأمر الثانوي (اختياري)",
+      "رقم هاتف ولي الأمر (اختياري)",
     ),
     "phoneMustBe11Digits": MessageLookupByLibrary.simpleMessage(
       "يجب أن يتكون رقم الهاتف من 11 رقمًا",

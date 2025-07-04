@@ -195,10 +195,10 @@ class S {
     );
   }
 
-  /// `Parent secondary phone number (optional)`
+  /// `Parent phone number (optional)`
   String get parentSecondaryPhoneNumberOptional {
     return Intl.message(
-      'Parent secondary phone number (optional)',
+      'Parent phone number (optional)',
       name: 'parentSecondaryPhoneNumberOptional',
       desc: '',
       args: [],

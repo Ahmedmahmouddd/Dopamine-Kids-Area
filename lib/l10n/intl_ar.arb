@@ -16,7 +16,7 @@
   "childNameOfGroupName": "اسم الطفل أو اسم المجموعة",
   "enterChildId": "أدخل رقم الطفل",
   "parentPhoneNumber": "رقم هاتف ولي الأمر",
-  "parentSecondaryPhoneNumberOptional": "رقم هاتف ولي الأمر الثانوي (اختياري)",
+  "parentSecondaryPhoneNumberOptional": "رقم هاتف ولي الأمر (اختياري)",
   "sessionDuration": "مدة الجلسة",
   "selectDuration": "اختر المدة",
   "minutes30": "٣٠ دقيقة",
