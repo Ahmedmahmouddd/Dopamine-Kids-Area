@@ -39,6 +39,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Enter the details of a new child to add to the system.",
     ),
     "entryID": MessageLookupByLibrary.simpleMessage("Entry ID"),
+    "entryIdRequired": MessageLookupByLibrary.simpleMessage(
+      "Entry ID is required",
+    ),
     "minutes120": MessageLookupByLibrary.simpleMessage("2 hours"),
     "minutes150": MessageLookupByLibrary.simpleMessage(
       "2 hours and 30 minutes",
@@ -47,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "minutes30": MessageLookupByLibrary.simpleMessage("30 minutes"),
     "minutes60": MessageLookupByLibrary.simpleMessage("1 hour"),
     "minutes90": MessageLookupByLibrary.simpleMessage("1 hour and 30 minutes"),
+    "nameRequired": MessageLookupByLibrary.simpleMessage("Name is required"),
     "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
     "numberOfChildren": MessageLookupByLibrary.simpleMessage(
       "Number of children",
@@ -58,8 +62,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "parentSecondaryPhoneNumberOptional": MessageLookupByLibrary.simpleMessage(
       "Parent secondary phone number (optional)",
     ),
+    "phoneMustBe11Digits": MessageLookupByLibrary.simpleMessage(
+      "Phone number must be 11 digits",
+    ),
+    "phoneMustContainOnlyNumbers": MessageLookupByLibrary.simpleMessage(
+      "Phone number must contain only numbers",
+    ),
+    "phoneMustStartWith01": MessageLookupByLibrary.simpleMessage(
+      "Phone number must start with 01",
+    ),
     "phoneNumber2Optional": MessageLookupByLibrary.simpleMessage(
       "Phone number 2 (optional)",
+    ),
+    "phoneRequired": MessageLookupByLibrary.simpleMessage(
+      "Primary phone number is required",
     ),
     "primaryPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Primary Phone Number",
@@ -71,6 +87,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectDuration": MessageLookupByLibrary.simpleMessage("Select duration"),
     "selectNumber": MessageLookupByLibrary.simpleMessage("Select Number"),
     "sessionDuration": MessageLookupByLibrary.simpleMessage("Session duration"),
+    "sessionDurationRequired": MessageLookupByLibrary.simpleMessage(
+      "Session duration is required",
+    ),
     "settings": MessageLookupByLibrary.simpleMessage("Settings"),
     "totalPoints": MessageLookupByLibrary.simpleMessage("Total Points"),
   };

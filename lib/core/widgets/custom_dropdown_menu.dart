@@ -1,7 +1,6 @@
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:kids_area_system/core/helpers/helpers.dart';
 import 'package:kids_area_system/core/theme/app_colors.dart';
 import 'package:kids_area_system/core/theme/app_text_styles.dart';
 import 'package:kids_area_system/core/utils/app_constants.dart';
@@ -15,6 +14,7 @@ class CustomDropdownField<T> extends StatelessWidget {
     required this.onChanged,
     this.value,
     this.image,
+    this.validator,
   });
 
   final String title;
@@ -22,98 +22,93 @@ class CustomDropdownField<T> extends StatelessWidget {
   final List<DropdownMenuItem<T>> items;
   final T? value;
   final ValueChanged<T?> onChanged;
-  final String? image; // 🆕 SVG path for prefix icon
+  final String? image;
+  final FormFieldValidator<T>? validator;
 
   @override
   Widget build(BuildContext context) {
-    final selectedItem = items.firstWhere(
-      (item) => item.value == value,
-      orElse: () => DropdownMenuItem<T>(
-        value: null,
-        child: Text(hint, style: AppTextStyles.font14Grey),
-      ),
-    );
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(title, style: AppTextStyles.font14Black),
-        const SizedBox(height: AppConstants.extraSmallPadding),
-        DropdownButtonHideUnderline(
-          child: DropdownButton2<T>(
-            isExpanded: true,
-            value: value,
-            items: items,
-            onChanged: onChanged,
-            style: AppTextStyles.font14Black,
-            dropdownStyleData: DropdownStyleData(
-              maxHeight: 200,
-              decoration: BoxDecoration(
-                color: AppColors.white,
-                borderRadius: BorderRadius.circular(AppConstants.basePadding),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 8,
-                    offset: Offset(0, 2),
-                  ),
-                ],
-              ),
-              elevation: 3,
-              padding: EdgeInsets.zero,
+        const SizedBox(height: AppConstants.smallPadding),
+        DropdownButtonFormField2<T>(
+          isExpanded: true,
+          value: value,
+          items: items,
+          validator: validator,
+          onChanged: onChanged,
+          decoration: InputDecoration(
+            contentPadding: const EdgeInsets.symmetric(
+              vertical: 14,
+              horizontal: 12,
             ),
-            menuItemStyleData: const MenuItemStyleData(height: 40),
-            customButton: Container(
-              height: 40,
-              // padding: const EdgeInsets.symmetric(horizontal: 12),
-              decoration: BoxDecoration(
-                color: AppColors.white,
-                border: Border.all(color: AppColors.lightGrey, width: 2),
-                borderRadius: BorderRadius.circular(AppConstants.basePadding),
+            prefixIcon: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
+              child: image != null
+                  ? SvgPicture.asset(image!, color: AppColors.grey)
+                  : null,
+            ),
+            prefixIconConstraints: const BoxConstraints(
+              minWidth: 24,
+              minHeight: 24,
+            ),
+            filled: true,
+            fillColor: AppColors.white,
+            hintText: hint,
+            hintStyle: AppTextStyles.font14Grey,
+            isDense: true,
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppConstants.smallPadding),
+              borderSide: BorderSide(color: AppColors.lightGrey, width: 2),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppConstants.smallPadding),
+              borderSide: BorderSide(color: AppColors.yellow, width: 2),
+            ),
+            errorStyle: AppTextStyles.font12Red,
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppConstants.smallPadding),
+              borderSide: BorderSide(
+                color: AppColors.red.withAlpha(100),
+                width: 2,
               ),
-              child: Row(
-                spacing: 12,
-                children: [
-                  if (image != null)
-                    Padding(
-                      padding: EdgeInsets.only(
-                        right: isLanguageArabic()
-                            ? AppConstants.basePadding
-                            : 0,
-                        left: isLanguageArabic() ? 0 : AppConstants.basePadding,
-                      ),
-                      child: SvgPicture.asset(
-                        image!,
-                        height: AppConstants.smallIconSize,
-                        color: AppColors.grey,
-                      ),
-                    ),
-                  Expanded(
-                    child: Text(
-                      value != null
-                          ? (selectedItem.child as Text).data ?? ''
-                          : hint,
-                      style: value != null
-                          ? AppTextStyles.font14Black
-                          : AppTextStyles.font14Grey,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      right: isLanguageArabic() ? 0 : AppConstants.basePadding,
-                      left: isLanguageArabic() ? AppConstants.basePadding : 0,
-                    ),
-                    child: SvgPicture.asset(
-                      "assets/icons/arrow-down.svg",
-                      width: 16,
-                      height: 16,
-                    ),
-                  ),
-                ],
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppConstants.smallPadding),
+              borderSide: BorderSide(
+                color: AppColors.red.withAlpha(160),
+                width: 2,
               ),
             ),
           ),
+          iconStyleData: IconStyleData(
+            icon: SvgPicture.asset(
+              "assets/icons/arrow-down.svg",
+              width: 16,
+              height: 16,
+              color: AppColors.grey,
+            ),
+            iconEnabledColor: AppColors.grey,
+            iconDisabledColor: AppColors.grey,
+          ),
+          style: AppTextStyles.font14Black,
+          dropdownStyleData: DropdownStyleData(
+            maxHeight: 200,
+            decoration: BoxDecoration(
+              color: AppColors.white,
+              borderRadius: BorderRadius.circular(AppConstants.basePadding),
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 8,
+                  offset: Offset(0, 2),
+                ),
+              ],
+            ),
+          ),
+          menuItemStyleData: const MenuItemStyleData(height: 40),
+          hint: Text(hint, style: AppTextStyles.font14Grey),
         ),
       ],
     );

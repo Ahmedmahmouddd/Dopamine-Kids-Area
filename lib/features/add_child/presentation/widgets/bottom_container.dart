@@ -5,7 +5,9 @@ import 'package:kids_area_system/core/widgets/custom_button.dart';
 import 'package:kids_area_system/generated/l10n.dart';
 
 class BottomBorder extends StatelessWidget {
-  const BottomBorder({super.key});
+  const BottomBorder({super.key, required this.addChildButton, required this.resetFormButton});
+
+  final Function() addChildButton, resetFormButton;
 
   @override
   Widget build(BuildContext context) {
@@ -28,16 +30,15 @@ class BottomBorder extends StatelessWidget {
           CustomButton(
             overlayColor: AppColors.secondayOverlayColor,
             backgroundColor: AppColors.white,
-            onPressed: () {},
+            onPressed: resetFormButton,
             text: S.of(context).resetForm,
             imageAsset: "assets/icons/refresh.svg",
           ),
           CustomButton(
-            // width: 200,
             textColor: AppColors.white,
             imageColor: AppColors.white,
             backgroundColor: AppColors.red,
-            onPressed: () {},
+            onPressed: addChildButton,
             text: S.of(context).addChildAndPrintReset,
             imageAsset: "assets/icons/printer.svg",
           ),

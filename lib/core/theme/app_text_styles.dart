@@ -24,7 +24,12 @@ class AppTextStyles {
     fontWeight: FontWeight.w500,
     color: AppColors.white,
   );
-
+  static const TextStyle font12Red = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 12,
+    fontWeight: FontWeight.w600,
+    color: AppColors.red,
+  );
   static const TextStyle font14Black = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,

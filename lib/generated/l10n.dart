@@ -309,6 +309,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Name is required`
+  String get nameRequired {
+    return Intl.message(
+      'Name is required',
+      name: 'nameRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Entry ID is required`
+  String get entryIdRequired {
+    return Intl.message(
+      'Entry ID is required',
+      name: 'entryIdRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Primary phone number is required`
+  String get phoneRequired {
+    return Intl.message(
+      'Primary phone number is required',
+      name: 'phoneRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Session duration is required`
+  String get sessionDurationRequired {
+    return Intl.message(
+      'Session duration is required',
+      name: 'sessionDurationRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number must start with 01`
+  String get phoneMustStartWith01 {
+    return Intl.message(
+      'Phone number must start with 01',
+      name: 'phoneMustStartWith01',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number must be 11 digits`
+  String get phoneMustBe11Digits {
+    return Intl.message(
+      'Phone number must be 11 digits',
+      name: 'phoneMustBe11Digits',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number must contain only numbers`
+  String get phoneMustContainOnlyNumbers {
+    return Intl.message(
+      'Phone number must contain only numbers',
+      name: 'phoneMustContainOnlyNumbers',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
