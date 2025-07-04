@@ -15,8 +15,8 @@ class TopBorder extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.lightGrey,
         borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(AppConstants.mediumPadding),
-          topRight: Radius.circular(AppConstants.mediumPadding),
+          topLeft: Radius.circular(AppConstants.largeRadius),
+          topRight: Radius.circular(AppConstants.largeRadius),
         ),
       ),
       child: Padding(

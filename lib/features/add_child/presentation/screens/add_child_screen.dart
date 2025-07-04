@@ -36,199 +36,164 @@ class AddChildFormContent extends StatelessWidget {
           children: [
             const Spacer(flex: 3),
             Expanded(
-              flex: 5,
+              flex: 6,
               child: Column(
                 children: [
                   const TopBorder(),
                   Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.white,
-                      border: Border.all(color: AppColors.white),
-                    ),
+                    color: AppColors.white,
                     child: Form(
                       key: cubit.formKey,
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 32),
+                        padding: const EdgeInsets.symmetric(
+                          vertical: AppConstants.extraLargePadding,
+                          horizontal: AppConstants.extraLargePadding,
+                        ),
                         child: Column(
                           spacing: AppConstants.largePadding,
                           children: [
                             // Name and ID Row
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 32,
-                              ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: CustomTextField(
-                                      validator: (value) =>
-                                          cubit.validateName(value, context),
-                                      controller: cubit.nameController,
-                                      title: s.childName,
-                                      hint: s.childNameOfGroupName,
-                                      image: 'assets/icons/profile.svg',
-                                    ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: CustomTextField(
+                                    validator: (value) =>
+                                        cubit.validateName(value, context),
+                                    controller: cubit.nameController,
+                                    title: s.childName,
+                                    hint: s.childNameOfGroupName,
+                                    image: 'assets/icons/profile.svg',
                                   ),
-                                  const SizedBox(
-                                    width: AppConstants.horizontalPadding,
+                                ),
+                                const SizedBox(
+                                  width: AppConstants.horizontalPadding,
+                                ),
+                                Expanded(
+                                  child: CustomTextField(
+                                    validator: (value) =>
+                                        cubit.validateId(value, context),
+                                    controller: cubit.idController,
+                                    title: s.entryID,
+                                    hint: s.enterChildId,
+                                    image: 'assets/icons/id.svg',
                                   ),
-                                  Expanded(
-                                    child: CustomTextField(
-                                      validator: (value) =>
-                                          cubit.validateId(value, context),
-                                      controller: cubit.idController,
-                                      title: s.entryID,
-                                      hint: s.enterChildId,
-                                      image: 'assets/icons/id.svg',
-                                    ),
-                                  ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                             // Phone Numbers Row
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: AppConstants.extraLargePadding,
-                              ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: CustomTextField(
-                                      validator: (value) =>
-                                          cubit.validatePhone1(value, context),
-                                      controller: cubit.phone1Controller,
-                                      title: s.primaryPhoneNumber,
-                                      hint: s.parentPhoneNumber,
-                                      image: 'assets/icons/call.svg',
-                                    ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: CustomTextField(
+                                    validator: (value) =>
+                                        cubit.validatePhone1(value, context),
+                                    controller: cubit.phone1Controller,
+                                    title: s.primaryPhoneNumber,
+                                    hint: s.parentPhoneNumber,
+                                    image: 'assets/icons/call.svg',
                                   ),
-                                  const SizedBox(
-                                    width: AppConstants.horizontalPadding,
+                                ),
+                                const SizedBox(
+                                  width: AppConstants.horizontalPadding,
+                                ),
+                                Expanded(
+                                  child: CustomTextField(
+                                    validator: (value) =>
+                                        cubit.validatePhone2(value, context),
+                                    controller: cubit.phone2Controller,
+                                    title: s.secondaryPhoneNumber,
+                                    hint: s.parentSecondaryPhoneNumberOptional,
+                                    image: 'assets/icons/call-add.svg',
                                   ),
-                                  Expanded(
-                                    child: CustomTextField(
-                                      validator: (value) =>
-                                          cubit.validatePhone2(value, context),
-                                      controller: cubit.phone2Controller,
-                                      title: s.secondaryPhoneNumber,
-                                      hint:
-                                          s.parentSecondaryPhoneNumberOptional,
-                                      image: 'assets/icons/call-add.svg',
-                                    ),
-                                  ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                             // Dropdowns Row
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: AppConstants.extraLargePadding,
-                              ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child:
-                                        BlocBuilder<
-                                          AddChildCubit,
-                                          AddChildState
-                                        >(
-                                          builder: (context, state) {
-                                            return CustomDropdownField(
-                                              validator: (value) =>
-                                                  cubit.validateSessionDuration(
-                                                    value,
-                                                    context,
-                                                  ),
-                                              image: 'assets/icons/clock.svg',
-                                              title: s.sessionDuration,
-                                              hint: s.selectDuration,
-                                              value: cubit.selectedDuration,
-                                              items: cubit.sessionDurations(
-                                                context,
-                                              ),
-                                              onChanged:
-                                                  cubit.updateSelectedDuration,
-                                            );
-                                          },
-                                        ),
-                                  ),
-                                  const SizedBox(
-                                    width: AppConstants.horizontalPadding,
-                                  ),
-                                  Expanded(
-                                    child:
-                                        BlocBuilder<
-                                          AddChildCubit,
-                                          AddChildState
-                                        >(
-                                          builder: (context, state) {
-                                            return CustomDropdownField(
-                                              image: 'assets/icons/people.svg',
-                                              title: s.numberOfChildren,
-                                              hint: s.selectNumber,
-                                              value:
-                                                  cubit.selectedChildrenCount,
-                                              items: cubit.childrenCount,
-                                              onChanged:
-                                                  cubit.updateChildrenCount,
-                                            );
-                                          },
-                                        ),
-                                  ),
-                                ],
-                              ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child:
+                                      BlocBuilder<AddChildCubit, AddChildState>(
+                                        builder: (context, state) {
+                                          return CustomDropdownField(
+                                            validator: (value) =>
+                                                cubit.validateSessionDuration(
+                                                  value,
+                                                  context,
+                                                ),
+                                            image: 'assets/icons/clock.svg',
+                                            title: s.sessionDuration,
+                                            hint: s.selectDuration,
+                                            value: cubit.selectedDuration,
+                                            items: cubit.sessionDurations(
+                                              context,
+                                            ),
+                                            onChanged:
+                                                cubit.updateSelectedDuration,
+                                          );
+                                        },
+                                      ),
+                                ),
+                                const SizedBox(
+                                  width: AppConstants.horizontalPadding,
+                                ),
+                                Expanded(
+                                  child:
+                                      BlocBuilder<AddChildCubit, AddChildState>(
+                                        builder: (context, state) {
+                                          return CustomDropdownField(
+                                            image: 'assets/icons/people.svg',
+                                            title: s.numberOfChildren,
+                                            hint: s.selectNumber,
+                                            value: cubit.selectedChildrenCount,
+                                            items: cubit.childrenCount,
+                                            onChanged:
+                                                cubit.updateChildrenCount,
+                                          );
+                                        },
+                                      ),
+                                ),
+                              ],
                             ),
                             // Points and Time Row
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: AppConstants.extraLargePadding,
-                              ),
-                              child: Row(
-                                children: [
-                                  Expanded(
-                                    child:
-                                        BlocBuilder<
-                                          AddChildCubit,
-                                          AddChildState
-                                        >(
-                                          builder: (context, state) {
-                                            return CustomTextField(
-                                              fillColor: AppColors.lightGrey,
-                                              enabled: false,
-                                              controller:
-                                                  cubit.pointsController,
-                                              title: s.totalPoints,
-                                              hint: s.totalPoints,
-                                              image: 'assets/icons/point.svg',
-                                            );
-                                          },
-                                        ),
-                                  ),
-                                  const SizedBox(width: 40),
-                                  Expanded(
-                                    child:
-                                        BlocBuilder<
-                                          AddChildCubit,
-                                          AddChildState
-                                        >(
-                                          builder: (context, state) {
-                                            return CustomTextField(
-                                              fillColor: AppColors.lightGrey,
-                                              enabled: false,
-                                              controller:
-                                                  cubit.currentTimeController,
-                                              title: s.currentTime,
-                                              hint: s.currentTime,
-                                              image: 'assets/icons/clock.svg',
-                                            );
-                                          },
-                                        ),
-                                  ),
-                                ],
-                              ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child:
+                                      BlocBuilder<AddChildCubit, AddChildState>(
+                                        builder: (context, state) {
+                                          return CustomTextField(
+                                            fillColor: AppColors.lightGrey,
+                                            enabled: false,
+                                            controller: cubit.pointsController,
+                                            title: s.totalPoints,
+                                            hint: s.totalPoints,
+                                            image: 'assets/icons/point.svg',
+                                          );
+                                        },
+                                      ),
+                                ),
+                                const SizedBox(width: 40),
+                                Expanded(
+                                  child:
+                                      BlocBuilder<AddChildCubit, AddChildState>(
+                                        builder: (context, state) {
+                                          return CustomTextField(
+                                            fillColor: AppColors.lightGrey,
+                                            enabled: false,
+                                            controller:
+                                                cubit.currentTimeController,
+                                            title: s.currentTime,
+                                            hint: s.currentTime,
+                                            image: 'assets/icons/clock.svg',
+                                          );
+                                        },
+                                      ),
+                                ),
+                              ],
                             ),
                           ],
                         ),

@@ -129,6 +129,8 @@ class AddChildCubit extends Cubit<AddChildState> {
       log('Secondary Phone: ${phone2Controller.text.trim()}');
       log('Session Duration: $selectedDuration');
       log('Number of Children: $selectedChildrenCount');
+      log('Current Time: ${currentTimeController.text.trim()}');
+      log('Points: ${pointsController.text.trim()}');
     }
   }
 

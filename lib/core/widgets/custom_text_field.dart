@@ -29,7 +29,7 @@ class CustomTextField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(title, style: AppTextStyles.font14Black),
-        const SizedBox(height: AppConstants.smallPadding),
+        const SizedBox(height: AppConstants.extraSmallPadding),
         SizedBox(
           child: TextFormField(
             autovalidateMode: AutovalidateMode.onUserInteraction,
