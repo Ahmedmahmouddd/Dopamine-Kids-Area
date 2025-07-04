@@ -27,11 +27,14 @@ class TopBorder extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(S.of(context).enterNewChild, style: AppTextStyles.font20Red),
+            Text(
+              S.of(context).enterNewChild,
+              style: AppTextStyles.font20RedBold,
+            ),
             const SizedBox(height: AppConstants.smallPadding),
             Text(
               S.of(context).enterNewChildDescription,
-              style: AppTextStyles.font15Grey,
+              style: AppTextStyles.font15GreyRegular,
             ),
           ],
         ),

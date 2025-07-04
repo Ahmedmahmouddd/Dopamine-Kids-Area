@@ -28,7 +28,7 @@ class CustomTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: AppTextStyles.font14Black),
+        Text(title, style: AppTextStyles.font14BlackMedium),
         const SizedBox(height: AppConstants.extraSmallPadding),
         SizedBox(
           child: TextFormField(
@@ -39,7 +39,7 @@ class CustomTextField extends StatelessWidget {
             validator: validator,
             cursorColor: AppColors.yellow,
             cursorWidth: 2,
-            style: AppTextStyles.font14Black,
+            style: AppTextStyles.font14BlackMedium,
             decoration: InputDecoration(
               prefixIcon: Padding(
                 padding: const EdgeInsets.symmetric(
@@ -59,7 +59,7 @@ class CustomTextField extends StatelessWidget {
                 vertical: 14,
                 horizontal: 12,
               ),
-              hintStyle: AppTextStyles.font14Grey,
+              hintStyle: AppTextStyles.font14GreyRegular,
               isDense: true,
               enabledBorder: const OutlineInputBorder(
                 borderSide: BorderSide(color: AppColors.lightGrey, width: 2),
@@ -84,7 +84,7 @@ class CustomTextField extends StatelessWidget {
                   Radius.circular(AppConstants.smallPadding),
                 ),
               ),
-              errorStyle: AppTextStyles.font12Red,
+              errorStyle: AppTextStyles.font12RedSemiBold,
               errorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(AppConstants.smallPadding),
                 borderSide: BorderSide(

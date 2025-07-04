@@ -62,7 +62,9 @@ class CustomButton extends StatelessWidget {
               baselineType: TextBaseline.alphabetic,
               child: Text(
                 text,
-                style: AppTextStyles.font14Black.copyWith(color: textColor),
+                style: AppTextStyles.font14BlackMedium.copyWith(
+                  color: textColor,
+                ),
               ),
             ),
           ],

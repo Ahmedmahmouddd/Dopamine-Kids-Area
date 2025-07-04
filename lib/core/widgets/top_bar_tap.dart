@@ -44,8 +44,8 @@ class TopBarTab extends StatelessWidget {
           child: Text(
             label,
             style: isSelected
-                ? AppTextStyles.font16BoldBlack
-                : AppTextStyles.font16Grey,
+                ? AppTextStyles.font16BlackBold
+                : AppTextStyles.font16GreyMedium,
           ),
         ),
       ),

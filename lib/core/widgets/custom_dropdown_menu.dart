@@ -28,7 +28,7 @@ class CustomDropdownField<T> extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: AppTextStyles.font14Black),
+        Text(title, style: AppTextStyles.font14BlackMedium),
         const SizedBox(height: AppConstants.extraSmallPadding),
         SizedBox(
           // Add SizedBox to match TextFormField wrapper
@@ -60,7 +60,7 @@ class CustomDropdownField<T> extends StatelessWidget {
               filled: true,
               fillColor: AppColors.white,
               hintText: hint,
-              hintStyle: AppTextStyles.font14Grey,
+              hintStyle: AppTextStyles.font14GreyRegular,
               isDense: true,
               constraints: const BoxConstraints(
                 minHeight: 48, // Explicit height constraint
@@ -73,7 +73,7 @@ class CustomDropdownField<T> extends StatelessWidget {
                 borderRadius: BorderRadius.circular(AppConstants.smallPadding),
                 borderSide: BorderSide(color: AppColors.yellow, width: 2),
               ),
-              errorStyle: AppTextStyles.font12Red,
+              errorStyle: AppTextStyles.font12RedSemiBold,
               errorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(AppConstants.smallPadding),
                 borderSide: BorderSide(
@@ -99,7 +99,7 @@ class CustomDropdownField<T> extends StatelessWidget {
               iconEnabledColor: AppColors.grey,
               iconDisabledColor: AppColors.grey,
             ),
-            style: AppTextStyles.font14Black,
+            style: AppTextStyles.font14BlackMedium,
             dropdownStyleData: DropdownStyleData(
               maxHeight: 200,
               padding: EdgeInsets.zero,
@@ -116,7 +116,7 @@ class CustomDropdownField<T> extends StatelessWidget {
               ),
             ),
             menuItemStyleData: const MenuItemStyleData(height: 40),
-            hint: Text(hint, style: AppTextStyles.font14Grey),
+            hint: Text(hint, style: AppTextStyles.font14GreyRegular),
           ),
         ),
       ],
