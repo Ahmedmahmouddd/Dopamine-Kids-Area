@@ -33,6 +33,7 @@ class CustomDropdownField<T> extends StatelessWidget {
         Text(title, style: AppTextStyles.font14Black),
         const SizedBox(height: AppConstants.smallPadding),
         DropdownButtonFormField2<T>(
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           isExpanded: true,
           value: value,
           items: items,
@@ -95,6 +96,7 @@ class CustomDropdownField<T> extends StatelessWidget {
           style: AppTextStyles.font14Black,
           dropdownStyleData: DropdownStyleData(
             maxHeight: 200,
+            padding: EdgeInsets.zero,
             decoration: BoxDecoration(
               color: AppColors.white,
               borderRadius: BorderRadius.circular(AppConstants.basePadding),

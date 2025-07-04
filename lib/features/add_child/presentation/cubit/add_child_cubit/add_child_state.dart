@@ -1,6 +1,9 @@
 part of 'add_child_cubit.dart';
 
-@immutable
-sealed class AddChildState {}
+class AddChildState {
+  const AddChildState();
+}
 
-final class AddChildInitial extends AddChildState {}
+class AddChildInitial extends AddChildState {
+  const AddChildInitial();
+}

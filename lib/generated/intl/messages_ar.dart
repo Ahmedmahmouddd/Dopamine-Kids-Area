@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "addChild": MessageLookupByLibrary.simpleMessage("إضافة طفل"),
     "addChildAndPrintReset": MessageLookupByLibrary.simpleMessage(
-      "إضافة طفل وطباعة إعادة تعيين",
+      "إضافة طفل وطباعة الإيصال",
     ),
     "childName": MessageLookupByLibrary.simpleMessage("اسم الطفل"),
     "childNameOfGroupName": MessageLookupByLibrary.simpleMessage(
@@ -33,27 +33,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "currentSessions": MessageLookupByLibrary.simpleMessage("الجلسات الحالية"),
     "currentTime": MessageLookupByLibrary.simpleMessage("الوقت الحالي"),
     "dashboard": MessageLookupByLibrary.simpleMessage("لوحة التحكم"),
-    "enterChildId": MessageLookupByLibrary.simpleMessage(
-      "أدخل الرقم التعريفي الطفل",
-    ),
-    "enterNewChild": MessageLookupByLibrary.simpleMessage("أدخل طفل جديد"),
+    "enterChildId": MessageLookupByLibrary.simpleMessage("أدخل رقم الطفل"),
+    "enterNewChild": MessageLookupByLibrary.simpleMessage("إدخال طفل جديد"),
     "enterNewChildDescription": MessageLookupByLibrary.simpleMessage(
-      "أدخل بيانات طفل جديد لإضافته إلى النظام.",
+      "أدخل بيانات الطفل الجديد لإضافته إلى النظام",
     ),
-    "entryID": MessageLookupByLibrary.simpleMessage("الرقم التعريفي الدخول"),
-    "entryIdRequired": MessageLookupByLibrary.simpleMessage(
-      "الرقم التعريفي مطلوب",
-    ),
-    "minutes120": MessageLookupByLibrary.simpleMessage("ساعتان"),
-    "minutes150": MessageLookupByLibrary.simpleMessage("ساعتان ونصف"),
+    "entryID": MessageLookupByLibrary.simpleMessage("رقم الدخول"),
+    "entryIdRequired": MessageLookupByLibrary.simpleMessage("رقم الدخول مطلوب"),
+    "minutes120": MessageLookupByLibrary.simpleMessage("ساعتين"),
+    "minutes150": MessageLookupByLibrary.simpleMessage("ساعتين ونصف"),
     "minutes180": MessageLookupByLibrary.simpleMessage("ثلاث ساعات"),
-    "minutes30": MessageLookupByLibrary.simpleMessage("نصف ساعة"),
+    "minutes30": MessageLookupByLibrary.simpleMessage("٣٠ دقيقة"),
     "minutes60": MessageLookupByLibrary.simpleMessage("ساعة واحدة"),
     "minutes90": MessageLookupByLibrary.simpleMessage("ساعة ونصف"),
-    "nameRequired": MessageLookupByLibrary.simpleMessage("الاسم مطلوب"),
+    "nameRequired": MessageLookupByLibrary.simpleMessage("اسم الطفل مطلوب"),
     "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
     "numberOfChildren": MessageLookupByLibrary.simpleMessage("عدد الأطفال"),
-    "openTime": MessageLookupByLibrary.simpleMessage("وقت الفتح"),
+    "openTime": MessageLookupByLibrary.simpleMessage("وقت مفتوح"),
     "parentPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "رقم هاتف ولي الأمر",
     ),
@@ -61,7 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "رقم هاتف ولي الأمر الثانوي (اختياري)",
     ),
     "phoneMustBe11Digits": MessageLookupByLibrary.simpleMessage(
-      "يجب أن يكون رقم الهاتف 11 رقمًا",
+      "يجب أن يتكون رقم الهاتف من 11 رقمًا",
     ),
     "phoneMustContainOnlyNumbers": MessageLookupByLibrary.simpleMessage(
       "يجب أن يحتوي رقم الهاتف على أرقام فقط",
@@ -69,7 +65,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "phoneMustStartWith01": MessageLookupByLibrary.simpleMessage(
       "يجب أن يبدأ رقم الهاتف بـ 01",
     ),
-    "phoneRequired": MessageLookupByLibrary.simpleMessage("رقم الهاتف مطلوب"),
+    "phoneNumber2Optional": MessageLookupByLibrary.simpleMessage(
+      "رقم الهاتف الثاني (اختياري)",
+    ),
+    "phoneRequired": MessageLookupByLibrary.simpleMessage(
+      "رقم الهاتف الأساسي مطلوب",
+    ),
     "primaryPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "رقم الهاتف الأساسي",
     ),
@@ -78,7 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "رقم الهاتف الثانوي",
     ),
     "selectDuration": MessageLookupByLibrary.simpleMessage("اختر المدة"),
-    "selectNumber": MessageLookupByLibrary.simpleMessage("اختر العدد"),
+    "selectNumber": MessageLookupByLibrary.simpleMessage("اختر رقم"),
     "sessionDuration": MessageLookupByLibrary.simpleMessage("مدة الجلسة"),
     "sessionDurationRequired": MessageLookupByLibrary.simpleMessage(
       "مدة الجلسة مطلوبة",
