@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kids_area_system/core/theme/app_colors.dart';
@@ -51,6 +50,7 @@ class AddChildFormContent extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 32),
                         child: Column(
+                          spacing: AppConstants.largePadding,
                           children: [
                             // Name and ID Row
                             Padding(
@@ -70,7 +70,9 @@ class AddChildFormContent extends StatelessWidget {
                                       image: 'assets/icons/profile.svg',
                                     ),
                                   ),
-                                  const SizedBox(width: 40),
+                                  const SizedBox(
+                                    width: AppConstants.horizontalPadding,
+                                  ),
                                   Expanded(
                                     child: CustomTextField(
                                       validator: (value) =>
@@ -84,7 +86,6 @@ class AddChildFormContent extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            const SizedBox(height: 24),
                             // Phone Numbers Row
                             Padding(
                               padding: const EdgeInsets.symmetric(
@@ -103,7 +104,9 @@ class AddChildFormContent extends StatelessWidget {
                                       image: 'assets/icons/call.svg',
                                     ),
                                   ),
-                                  const SizedBox(width: 40),
+                                  const SizedBox(
+                                    width: AppConstants.horizontalPadding,
+                                  ),
                                   Expanded(
                                     child: CustomTextField(
                                       validator: (value) =>
@@ -118,7 +121,6 @@ class AddChildFormContent extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            const SizedBox(height: 24),
                             // Dropdowns Row
                             Padding(
                               padding: const EdgeInsets.symmetric(
@@ -153,7 +155,9 @@ class AddChildFormContent extends StatelessWidget {
                                           },
                                         ),
                                   ),
-                                  const SizedBox(width: 40),
+                                  const SizedBox(
+                                    width: AppConstants.horizontalPadding,
+                                  ),
                                   Expanded(
                                     child:
                                         BlocBuilder<
@@ -177,7 +181,6 @@ class AddChildFormContent extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            const SizedBox(height: 24),
                             // Points and Time Row
                             Padding(
                               padding: const EdgeInsets.symmetric(
@@ -197,15 +200,24 @@ class AddChildFormContent extends StatelessWidget {
                                   ),
                                   const SizedBox(width: 40),
                                   Expanded(
-                                    child: CustomTextField(
-                                      fillColor: AppColors.lightGrey,
-                                      enabled: false,
-                                      controller: cubit.currentTimeController
-                                        ..text = DateTime.now().toString(),
-                                      title: s.currentTime,
-                                      hint: s.currentTime,
-                                      image: 'assets/icons/clock.svg',
-                                    ),
+                                    child:
+                                        BlocBuilder<
+                                          AddChildCubit,
+                                          AddChildState
+                                        >(
+                                          builder: (context, state) {
+                                            return CustomTextField(
+                                              fillColor: AppColors.lightGrey,
+                                              enabled: false,
+                                              controller: context
+                                                  .read<AddChildCubit>()
+                                                  .currentTimeController,
+                                              title: s.currentTime,
+                                              hint: s.currentTime,
+                                              image: 'assets/icons/clock.svg',
+                                            );
+                                          },
+                                        ),
                                   ),
                                 ],
                               ),
@@ -216,22 +228,7 @@ class AddChildFormContent extends StatelessWidget {
                     ),
                   ),
                   BottomBorder(
-                    addChildButton: () {
-                      if (cubit.formKey.currentState!.validate()) {
-                        log('Child Name: ${cubit.nameController.text.trim()}');
-                        log('Entry ID: ${cubit.idController.text.trim()}');
-                        log(
-                          'Primary Phone: ${cubit.phone1Controller.text.trim()}',
-                        );
-                        log(
-                          'Secondary Phone: ${cubit.phone2Controller.text.trim()}',
-                        );
-                        log('Session Duration: ${cubit.selectedDuration}');
-                        log(
-                          'Number of Children: ${cubit.selectedChildrenCount}',
-                        );
-                      }
-                    },
+                    addChildButton: cubit.addChild,
                     resetFormButton: cubit.resetForm,
                   ),
                 ],

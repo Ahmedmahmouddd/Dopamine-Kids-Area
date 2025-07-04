@@ -1,11 +1,17 @@
+import 'dart:async';
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:kids_area_system/core/helpers/helpers.dart';
 import 'package:kids_area_system/generated/l10n.dart';
 
 part 'add_child_state.dart';
 
 class AddChildCubit extends Cubit<AddChildState> {
-  AddChildCubit() : super(AddChildInitial());
+  AddChildCubit() : super(AddChildInitial()) {
+    _initTimeUpdates(); // Initialize time updates when cubit is created
+  }
 
   final formKey = GlobalKey<FormState>();
   final nameController = TextEditingController();
@@ -17,8 +23,7 @@ class AddChildCubit extends Cubit<AddChildState> {
 
   String? selectedDuration;
   String selectedChildrenCount = '1';
-
-
+  Timer? timeTimer;
 
   void dispose() {
     nameController.dispose();
@@ -93,9 +98,18 @@ class AddChildCubit extends Cubit<AddChildState> {
     formKey.currentState?.reset();
   }
 
-  
+  void addChild() {
+    if (formKey.currentState!.validate()) {
+      log('Child Name: ${nameController.text.trim()}');
+      log('Entry ID: ${idController.text.trim()}');
+      log('Primary Phone: ${phone1Controller.text.trim()}');
+      log('Secondary Phone: ${phone2Controller.text.trim()}');
+      log('Session Duration: $selectedDuration');
+      log('Number of Children: $selectedChildrenCount');
+    }
+  }
 
-   void updateSelectedDuration(String? value) {
+  void updateSelectedDuration(String? value) {
     selectedDuration = value;
     emit(AddChildState()); // Rebuild listeners
   }
@@ -103,5 +117,31 @@ class AddChildCubit extends Cubit<AddChildState> {
   void updateChildrenCount(String? value) {
     selectedChildrenCount = value ?? '1';
     emit(AddChildState()); // Rebuild listeners
+  }
+
+  void _initTimeUpdates() {
+    // Update immediately
+    _updateTimeDisplay();
+
+    // Update every minute
+    timeTimer = Timer.periodic(const Duration(minutes: 1), (_) {
+      _updateTimeDisplay();
+    });
+  }
+
+  void _updateTimeDisplay() {
+    final now = DateTime.now();
+    final hour = now.hour > 12 ? now.hour - 12 : now.hour;
+    final amPm = now.hour >= 12
+        ? isLanguageArabic()
+              ? 'مساءً'
+              : 'PM'
+        : isLanguageArabic()
+        ? 'صباحًا'
+        : 'AM';
+    final formattedTime =
+        '$hour:${now.minute.toString().padLeft(2, '0')} $amPm';
+    currentTimeController.text = formattedTime;
+    emit(AddChildState());
   }
 }
