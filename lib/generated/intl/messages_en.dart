@@ -42,6 +42,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "entryIdRequired": MessageLookupByLibrary.simpleMessage(
       "Entry ID is required",
     ),
+    "hours": MessageLookupByLibrary.simpleMessage("Hours"),
+    "le": MessageLookupByLibrary.simpleMessage("LE"),
     "minutes120": MessageLookupByLibrary.simpleMessage("2 hours"),
     "minutes150": MessageLookupByLibrary.simpleMessage(
       "2 hours and 30 minutes",
@@ -77,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "phoneRequired": MessageLookupByLibrary.simpleMessage(
       "Primary phone number is required",
     ),
+    "points": MessageLookupByLibrary.simpleMessage("Points"),
     "primaryPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Primary Phone Number",
     ),
@@ -90,7 +93,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "sessionDurationRequired": MessageLookupByLibrary.simpleMessage(
       "Session duration is required",
     ),
+    "sessions": MessageLookupByLibrary.simpleMessage("Sessions"),
     "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+    "totalHours": MessageLookupByLibrary.simpleMessage("Total Hours"),
     "totalPoints": MessageLookupByLibrary.simpleMessage("Total Points"),
+    "totalRevenue": MessageLookupByLibrary.simpleMessage("Total Revenue"),
+    "totalSessions": MessageLookupByLibrary.simpleMessage("Total Sessions"),
   };
 }

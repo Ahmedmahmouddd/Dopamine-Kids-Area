@@ -7,6 +7,7 @@ class AppColors {
   static const Color secondayOverlayColor = Color(0x1EB4B4B4);
   static const Color lightGrey = Color(0xFFE6E6E6);
   static const Color grey = Color(0xFF6F7278);
+  static const Color shadowColor = Color.fromARGB(40, 0, 0, 0);
   static const Color black = Color(0xFF000000);
   static const Color yellow = Color(0xFFF4B21B);
   static const Color red = Color(0xFFE3302D);

@@ -4,6 +4,26 @@ import 'app_colors.dart';
 class AppTextStyles {
   static const String _fontFamily = 'Cairo';
 
+  static const TextStyle font11GreenBold = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 11,
+    fontWeight: FontWeight.bold,
+    color: AppColors.green,
+  );
+
+  static const TextStyle font11RedBold = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 11,
+    fontWeight: FontWeight.bold,
+    color: AppColors.red,
+  );
+  static const TextStyle font11GreyMedium = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 11,
+    fontWeight: FontWeight.w500,
+    color: AppColors.grey,
+  );
+
   static const TextStyle font12GreyRegular = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 12,
@@ -37,7 +57,7 @@ class AppTextStyles {
     color: AppColors.black,
   );
 
-   static const TextStyle font14BlackSemiBold = TextStyle(
+  static const TextStyle font14BlackSemiBold = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,
     fontWeight: FontWeight.w600,
@@ -50,7 +70,6 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.grey,
   );
-
 
   static const TextStyle font14GreyMedium = TextStyle(
     fontFamily: _fontFamily,
@@ -106,7 +125,4 @@ class AppTextStyles {
     fontWeight: FontWeight.w600,
     color: AppColors.black,
   );
-
-
-
 }

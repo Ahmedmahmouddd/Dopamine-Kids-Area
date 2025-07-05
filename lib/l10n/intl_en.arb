@@ -36,5 +36,13 @@
     "sessionDurationRequired": "Session duration is required",
     "phoneMustStartWith01" : "Phone number must start with 01",
     "phoneMustBe11Digits" : "Phone number must be 11 digits",
-    "phoneMustContainOnlyNumbers" : "Phone number must contain only numbers"
+    "phoneMustContainOnlyNumbers" : "Phone number must contain only numbers",
+    "totalSessions" : "Total Sessions",
+    "totalRevenue" : "Total Revenue",
+    "totalHours" : "Total Hours",
+    "sessions" : "Sessions",
+    "points" : "Points",
+    "hours" :  "Hours",
+    "le" : "LE"
+
 }

@@ -163,6 +163,8 @@ class AddChildCubit extends Cubit<AddChildState> {
         '$hour:${now.minute.toString().padLeft(2, '0')} $amPm';
     currentTimeController.text = formattedTime;
     emit(AddChildState());
+
+    // gives me error StateError (Bad state: Cannot emit new states after calling close)
   }
 
   void _calculatePoints() {
