@@ -107,11 +107,11 @@ class CustomDropdownField<T> extends StatelessWidget {
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(AppConstants.basePadding),
                 boxShadow: const [
-                  BoxShadow(
-                    color: AppColors.shadowColor,
-                    blurRadius: 10,
-                    offset: Offset(0, 0), // changes position of shadow
-                  ),
+                 BoxShadow(
+            color: AppColors.shadowColor,
+            blurRadius: 8,
+            offset: Offset(0, 0), // changes position of shadow
+          ),
                 ],
               ),
             ),
